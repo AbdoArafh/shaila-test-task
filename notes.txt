@@ -1,0 +1,37 @@
+--step by step--
+bootstrap
+gulp
+w3c standards
+no errors
+sass
+no inline css
+pixel perfect
+
+Steps:
+📝 the header
+    ✅️ layout
+    ✅️ hover effect
+    📝 nested
+📝 the footer
+    ✅️ newsletter
+    📝 layout
+    📝 icons
+    ✅️ links
+    📝 copy rights
+    📝 contacts
+        ✅️ text
+        📝 icons
+📝 home page
+    📝 first carousel
+    📝 features
+    📝 our services
+    📝 our skill
+    📝 another carousel
+    📝 projects
+        📝 layout
+        📝 cool animation
+        📝 filter
+    📝 call to action
+    📝 from the blog
+    📝 our team
+    📝 sponsers?
