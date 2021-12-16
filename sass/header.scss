@@ -11,10 +11,6 @@ $link-padding: 2rem;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background-color: $bg;
-    border: 1px solid transparent;
-    border-bottom-color: rgba(221, 221, 221, 0.1);
-    padding: 0 10rem;
     .logo {
         place-self: center;
         padding: $link-padding 0;

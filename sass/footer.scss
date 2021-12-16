@@ -1,6 +1,17 @@
 @import '_vars';
 
 footer.footer {
+    a.link {
+        line-height: 1.75em;
+        font-size: 14px;
+        font-weight: normal;
+        transition: color 0.35s ease;
+        color: $light-gray;
+        text-decoration: none;
+        &:hover {
+            color: $teal;
+        }
+    }
     background-color: $bg;
     .newsletter {
         display: grid;
@@ -9,14 +20,11 @@ footer.footer {
         gap: 1rem;
         line-height: 1.45em;
         padding: 45px 0;
-        border: 1px solid transparent;
-        border-bottom-color: $light;
         .title {
             h2 {
                 font-weight: 500;
                 color: white;
                 user-select: none;
-                text-align: center;
             }
         }
         .email {
@@ -59,13 +67,13 @@ footer.footer {
         }
     }
     .info {
-        display: flex;
-        flex-direction: row;
+        // display: flex;
+        // flex-direction: row;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
         gap: 1rem;
         color: white;
         padding: 3rem 0;
-        border: 1px solid transparent;
-        border-bottom-color: $light;
         .title {
             font-weight: 500;
             word-spacing: 0.25em;
@@ -74,31 +82,37 @@ footer.footer {
         .some-links {
             display: flex;
             flex-direction: column;
-            a.link {
-                line-height: 1.75em;
-                font-size: 14px;
-                font-weight: normal;
-                transition: color 0.35s ease;
-                color: $light;
-                text-decoration: none;
-                &:hover {
-                    color: $teal;
-                }
-            }
+            gap: 1rem;
         }
         .description {
-            color: $light;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            color: $light-gray;
+            align-content: flex-end;
             .social-icons {
+                display: flex;
+                flex-direction: row;
+                gap: 0.5rem;
+                align-self: flex-end;
                 .social-icon {
-                    padding: 1rem;
+                    font-size: 14px;
+                    width: 45px;
+                    height: 45px;
+                    line-height: 43px;
+                    border: 2px solid $light;
+                    text-align: center;
                     border-radius: 50%;
-                    border: 2px solid $teal;
-                    filter: brightness(0.5);
+                    color: $light-gray;
+                    transition: color 0.2s ease, border-color 0.2s ease;
+                    &:hover {
+                        color: $teal;
+                        border-color: $teal;
+                    }
                 }
             }
         }
         .contact-us {
-            color: $light;
+            color: $light-gray;
             display: flex;
             flex-direction: column;
             gap: 1rem;
@@ -106,6 +120,30 @@ footer.footer {
                 color: white;
             }
 
+        }
+    }
+    .copyrights {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 30px 0;
+        .text {
+            color: $light-gray;
+            line-height: 1.75em;
+            font-size: 14px;
+            font-weight: normal;
+            a {
+                text-decoration: none;
+                color: $teal;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .links {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            margin-left: auto;
         }
     }
 }

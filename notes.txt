@@ -6,6 +6,7 @@ no errors
 sass
 no inline css
 pixel perfect
+responsive
 
 Steps:
 📝 the header
@@ -14,13 +15,13 @@ Steps:
     📝 nested
 📝 the footer
     ✅️ newsletter
-    📝 layout
-    📝 icons
+    ✅️ layout
+    ✅️ icons
     ✅️ links
     📝 copy rights
-    📝 contacts
+    ✅️ contacts
         ✅️ text
-        📝 icons
+        ✅️ icons
 📝 home page
     📝 first carousel
     📝 features

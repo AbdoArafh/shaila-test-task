@@ -8,14 +8,11 @@ html(lang="en")
         link(rel="stylesheet", href="../css/header.css")
         link(rel="stylesheet", href="../css/footer.css")
         link(rel="stylesheet", href="../css/global.css")
+        script(src="https://kit.fontawesome.com/298618d7d6.js", crossorigin="anonymous")
         block head
             title Layout
     body
-        //- include ../includes/header.pug
-        //- block content
-        //-     h1 Page content
-        //- include ../includes/footer.pug
-        include ../includes/footer.pug
+        include ../includes/header.pug
         block content
             h1 Page content
-        include ../includes/header.pug
+        include ../includes/footer.pug
