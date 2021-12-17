@@ -1,0 +1,96 @@
+@import '_vars';
+
+$thin-margin: 5px;
+
+.introduction {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 30px auto;
+    max-width: 1140px;
+    .image {
+        background-color: $gray;
+        width: 100%;
+        aspect-ratio: 33 / 18;
+        margin: $thin-margin;
+    }
+    .details {
+        margin: $thin-margin;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .welcome {
+            color: $gray;
+            font-size: 14px;
+            line-height: 1.5em;
+        }
+    }
+}
+
+.accordion {
+    .accordion-item {
+        .toggle-accordion {
+            width: 100%;
+            padding: 0.5rem 2rem;
+            text-align: left;
+            cursor: pointer;
+            background-color: white;
+            border: none;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 16px;
+            position: relative;
+            &:hover {
+                background-color: $light;       
+            }
+            &::before {
+                content: "";
+                width: 10px;
+                height: 7.5px;
+                position: absolute;
+                top: calc(50% - 3px);
+                right: 0;
+                pointer-events: none;
+                background-color: $gray;
+                clip-path: polygon(0 0, 100% 0, 50% 100%);
+                transition: transform 0.35s ease;
+                
+            }
+        }
+        .toggle-accordion.chosen {
+            &::before {
+                transform: rotate(180deg);
+            }
+        }
+        .accordion-content {
+            height: 0;
+            overflow: hidden;
+            transition: height 0.35s ease;
+            padding: 0 2rem;
+        }
+    }
+    .show-item {
+        height: 100px !important;
+    }
+}
+
+.section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 60px auto;
+    max-width: 1140px;
+    .accordion {
+        margin: $thin-margin 0 0 -1rem;
+    }
+    .skills {
+        margin: $thin-margin;
+        .title {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 14px 0;
+        }
+    }
+}

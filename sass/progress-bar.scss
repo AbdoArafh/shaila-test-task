@@ -1,0 +1,25 @@
+@import '_vars';
+
+.progress-bar {
+    height: 10px;
+    background-color: #eeeeee;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    position: relative;
+    .progress {
+        position: relative;
+        background-color: #0d1422;
+        height: 100%;
+        border-radius: 50px;
+        transition: width 1s ease;
+        .percentage {
+            position: absolute;
+            right: -14px;
+            font-size: 14px;
+            top: -20px;
+            font-weight: 500;
+            color: $teal;
+            user-select: none;
+        }
+    }
+}

@@ -9,19 +9,22 @@ pixel perfect
 responsive
 
 Steps:
-📝 the header
+✅️ the header
     ✅️ layout
     ✅️ hover effect
-    📝 nested
-📝 the footer
+✅️ the footer
     ✅️ newsletter
     ✅️ layout
     ✅️ icons
     ✅️ links
-    📝 copy rights
+    ✅️ copy rights
     ✅️ contacts
         ✅️ text
         ✅️ icons
+✅️ page header
+📝 our team
+✅️ accordion slide
+✅️ progress bar 
 📝 home page
     📝 first carousel
     📝 features
@@ -34,5 +37,12 @@ Steps:
         📝 filter
     📝 call to action
     📝 from the blog
-    📝 our team
     📝 sponsers?
+📝 about page
+    ✅️ welcome
+    ✅️ second section
+        ✅️ accordions
+        ✅️ progress
+        📝 our team
+        📝 sponsers?      
+    

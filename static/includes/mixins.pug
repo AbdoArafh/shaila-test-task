@@ -1,0 +1,19 @@
+mixin page_header(page_name)
+    link(rel="stylesheet", href="../../css/page-header.css")
+    .page-header
+        .hierarchy
+            a.home-link(href="index.html") Home
+            i.fas.fa-angle-right
+            a.page-link(href="#")= page_name
+        h2.title= page_name
+
+mixin progress_bar(percentage)
+    link(rel="stylesheet", href="../../css/progress-bar.css")
+    .progress-bar
+        .progress(style="width: "+percentage)
+            span.percentage= percentage
+
+mixin skill(skill, precentage)
+    .skill
+        .title= skill
+        +progress_bar(precentage)

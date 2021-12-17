@@ -23,3 +23,14 @@ body {
     border-bottom-color: $light;
     background-color: $bg;
 }
+
+.all-caps {
+    text-transform: uppercase;
+}
+
+p {
+    line-height: 1.75em;
+    color: $gray;
+    font-weight: 500;
+    font-size: 14px;
+}
