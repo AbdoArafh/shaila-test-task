@@ -22,14 +22,14 @@ Steps:
         ✅️ text
         ✅️ icons
 ✅️ page header
-📝 our team
+✅️ our team
 ✅️ accordion slide
 ✅️ progress bar 
 📝 home page
     📝 first carousel
     📝 features
     📝 our services
-    📝 our skill
+    📝 our skills
     📝 another carousel
     📝 projects
         📝 layout
@@ -38,7 +38,7 @@ Steps:
     📝 call to action
     📝 from the blog
     📝 sponsers?
-📝 about page
+✅️ about page
     ✅️ welcome
     ✅️ second section
         ✅️ accordions
