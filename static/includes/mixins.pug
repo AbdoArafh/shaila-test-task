@@ -17,3 +17,25 @@ mixin skill(skill, precentage)
     .skill
         .title= skill
         +progress_bar(precentage)
+
+mixin team_member(name, job_title)
+    .glider-slide.team-member
+        .image
+        .name= name
+        .job-title= "(" + job_title + ")"
+
+mixin our_team(name, job_title)
+    link(rel="stylesheet", href="../../css/our-team.css")
+    .container.our-team
+        .title Our team of professionals 
+        .funny-note 6 people is all we need here apparently.
+        .glider-contain 
+            .glider
+                +team_member("Shail", "CEO-shialthemes") 
+                +team_member("Abdurrahman", "Front-End Developer") 
+                +team_member("Lam Hoang", "Graphic Design") 
+                +team_member("Pixel", "Graphic Design") 
+                +team_member("Ha Nguyen", "CEO-shialthemes") 
+                +team_member("Whoever", "Out of Job") 
+            button.glider-prev.glider-control(aria-label="Previous") ⬅
+            button.glider-next.glider-control(aria-label="Next") ➡

@@ -1,0 +1,83 @@
+@import '_vars';
+
+$text-margin: 60px;
+
+.our-team {
+    margin: 60px auto;
+    .title {
+        font-size: 24px;
+        font-weight: 600;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        margin-left: $text-margin;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 5px;
+            width: 40px;
+            background-color: #dddddd;
+        }
+    }
+    .funny-note {
+        font-size: 14px;
+        color: $gray;
+        font-weight: normal;
+        margin-bottom: 2rem;
+        margin-left: $text-margin;
+    }
+    .glider-contain {
+        margin: 0 auto;
+        width: 90%;
+        .glider {
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;
+            .glider-slide {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                .image {
+                    width: 260px;
+                    height: 220px;
+                    background-color: $gray;
+                    margin: 0 auto 2rem auto;
+                    clip-path: polygon(
+                        25% 0,
+                        75% 0,
+                        100% 50%,
+                        75% 100%,
+                        25% 100%,
+                        0 50%
+                    );
+                }
+                .name {
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    margin-bottom: 0.75rem;
+                }
+                .job-title {
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    color: $gray;
+                }
+                &:hover {
+                    .image {
+                        filter: brightness(1.2);
+                    }
+                    .name {
+                        color: $teal;
+                    }
+                }
+            }
+        }
+        .glider-control {
+            color: $teal;
+        }
+    }
+}

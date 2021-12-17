@@ -3,6 +3,9 @@ extends layouts/default.pug
 block head 
     title Litmus | About
     link(rel="stylesheet", href="../css/about.css")
+    link(rel="stylesheet", href="../css/glider.min.css")
+    script(src="../js/glider.min.js")
+    script(src="../js/our-team.js")
 
 block content 
     +page_header("About Us")
@@ -25,3 +28,4 @@ block content
             +skill("html/css", "96%")
             +skill("marketing", "80%")
             +skill("awords", "85%")
+    +our_team()

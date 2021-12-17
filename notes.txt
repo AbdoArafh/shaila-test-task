@@ -43,6 +43,5 @@ Steps:
     ✅️ second section
         ✅️ accordions
         ✅️ progress
-        📝 our team
-        📝 sponsers?      
+        ✅️ our team
     
