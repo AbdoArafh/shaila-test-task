@@ -1,6 +1,110 @@
 @import '_vars';
 
-.content {
-    background-color: $bg;
-    height: 100vh;
+.features {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 60px auto;
+    .feature {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .icon {
+            svg {
+                transform: scale(0.5);
+                path {
+                    fill: $teal;
+                }
+            }
+        }
+        .title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            transition: color 0.35s ease;
+            &:hover {
+                color: $teal;
+            }
+        }
+        .seperator {
+            width: 50px;
+            height: 5px;
+            background-color: #dddddd;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+@mixin transition($property) {
+    transition: $property 0.35s ease;
+}
+
+.our_services {
+    .services {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        .service {
+            background-color: transparent;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            border: 1px dashed #dddddd;
+            padding: 4rem 1rem;
+            @include transition(all);
+            .details {
+                @include transition(color);
+            }
+            .icon {
+                width: 50px;
+                svg {
+                    path {
+                        fill: black;
+                        @include transition(fill);
+                    }
+                }
+            }
+            .title {
+                font-size: 18px;
+                font-weight: 600;
+            }
+            &:hover {
+                color: white;
+                background-color: $teal;
+                border-color: transparent;
+                .details {
+                    color: white;
+                }
+                .icon svg path {
+                    fill: white;
+                }
+                ::selection {
+                    background-color: white;
+                    color: $teal;
+                }
+                ::-moz-selection {
+                    background-color: white;
+                    color: $teal;
+                }
+            }
+        }
+    }
+}
+
+.our_skills {
+    margin: 60px auto;
+    .skills {
+        margin: $thin-margin;
+        .title {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 14px 0;
+        }
+    }
 }

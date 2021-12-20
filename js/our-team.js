@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", function() {
         slidesToShow: 'auto',
         slidesToScroll: 1,
         itemWidth: 300,
+        dragVelocity: 1,
         arrows: {
             prev: ".glider-prev",
             next: ".glider-next"

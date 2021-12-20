@@ -27,9 +27,9 @@ Steps:
 ✅️ progress bar 
 📝 home page
     📝 first carousel
-    📝 features
-    📝 our services
-    📝 our skills
+    ✅️ features
+    ✅️ our services
+    ✅️ our skills
     📝 another carousel
     📝 projects
         📝 layout

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "code . && pnpm run pug & pnpm run sass & pnpm run serve",
     "test": "echo \"Error: no test specified\" && exit 1",
     "pug": "pug static --out dist -w",
     "sass": "sass sass:css -w --style=compressed",

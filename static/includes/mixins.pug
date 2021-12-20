@@ -8,7 +8,6 @@ mixin page_header(page_name)
         h2.title= page_name
 
 mixin progress_bar(percentage)
-    link(rel="stylesheet", href="../../css/progress-bar.css")
     .progress-bar
         .progress(style="width: "+percentage)
             span.percentage= percentage
@@ -18,16 +17,36 @@ mixin skill(skill, precentage)
         .title= skill
         +progress_bar(precentage)
 
+mixin skills()
+    link(rel="stylesheet", href="../../css/progress-bar.css")   
+    .skills
+        +skill("graphics design", "70%")
+        +skill("html/css", "96%")
+        +skill("marketing", "80%")
+        +skill("awords", "85%")
+
 mixin team_member(name, job_title)
     .glider-slide.team-member
+        //- .image.hexagonal
+        //-     .hex-image-container
+        //-         .hex-image 
+        //-             .in1 
+        //-                 .in2 
+        //-                     img(src="https://via.placeholder.com/260.png/ffffff/ffffff", alt="placeholder")
         .image
         .name= name
         .job-title= "(" + job_title + ")"
 
+mixin glider_prev()
+    button.glider-prev.glider-control(aria-label="Previous") ⬅
+
+mixin glider_next()
+    button.glider-next.glider-control(aria-label="Next") ➡
+
 mixin our_team(name, job_title)
     link(rel="stylesheet", href="../../css/our-team.css")
     .container.our-team
-        .title Our team of professionals 
+        .cool-title Our team of professionals 
         .funny-note 6 people is all we need here apparently.
         .glider-contain 
             .glider
@@ -37,5 +56,14 @@ mixin our_team(name, job_title)
                 +team_member("Pixel", "Graphic Design") 
                 +team_member("Ha Nguyen", "CEO-shialthemes") 
                 +team_member("Whoever", "Out of Job") 
-            button.glider-prev.glider-control(aria-label="Previous") ⬅
-            button.glider-next.glider-control(aria-label="Next") ➡
+            +glider_prev()
+            +glider_next()
+
+mixin sponser(name)
+    img.sponser(src="../../resources/sponsers/"+name+".png", alt="sponser")
+
+mixin sponsers()
+    link(rel="stylesheet", href="../../css/sponsers.css")
+    .sponsers.container
+        -for (var i = 1; i <= 5; i++)
+            +sponser(i)
