@@ -7,7 +7,42 @@ block head
     script(src="../js/glider.min.js")
     script(src="../js/our-team.js")
 
+mixin project(name, type)
+    .project 
+        .name.all-caps=name 
+        .type= "-" + type + "-"
+
+mixin post()
+    .post 
+        img.image(src="https://via.placeholder.com/330x200.png/dddddd/dddddd", alt="blog image")
+        .details 
+            .date June 30, 2017
+            .title Unique Position.
+            p.from-blog. 
+                Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua.
+
 block content
+    .creative-design
+        .slide 
+        .glider-contain
+            .glider
+                -for (var i = 0; i < 3; i++)
+                    .glider-slide
+                        .left 
+                            .text
+                                .year 2017
+                                .adj.all-caps Creative
+                                .design.all-caps Design
+                            button.all-caps View Now
+                        .right
+                            img.background(src="../resources/ship.svg", alt="ship")
+                            img.ship(src="../resources/ship.svg", alt="ship")
+            +glider_prev()
+            +glider_next()
+        script new Glider(document.querySelector(".creative-design .glider-contain .glider"), {slidesToShow: 1,slidesToScroll: 1,dragVelocity: 1,arrows: {prev: ".glider-prev",next: ".glider-next"},draggable: true,scrollLock: true});
     .features.container
         .feature
             .icon 
@@ -51,5 +86,42 @@ block content
     .our_skills.container 
         .cool-title.all-caps Our Skills
         +skills()
+    .ratings
+        .glider-contain 
+            .glider
+                -for (var i = 0; i < 3; i++)
+                    .glider-slide.rating
+                        .rater 
+                            img.picture(src="https://via.placeholder.com/135x110.png/ffffff/ffffff", alt="rater picture")
+                            .name Shail
+                            .position.all-caps (CEO - Shialthemes)
+                            .rating-icon ⭐⭐⭐⭐⭐
+                        p.rating-text 
+                            | It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                        .quotation-mark ”
+            +glider_prev()
+            +glider_next()
+        script new Glider(document.querySelector(".ratings .glider-contain .glider"), {slidesToShow: 1,slidesToScroll: 1,dragVelocity: 1,arrows: {prev: ".glider-prev",next: ".glider-next"},draggable: true,scrollLock: true});
+    .container.projects 
+        .cool-title.all-caps Projects
+        .grid
+            -for (var i = 1; i <= 7; i++)
+                +project("Project #"+i, "graphic design")
+    .call-to-action
+        .container
+            .title.all-caps <span class="teal">Litmus</span> is a Unique Theme Many Features 
+            p.
+                Precision design, responsive ready, full shortcodes design,
+                perfect portfolio, unique blog layout and many many options for you...
+            button.buy.all-caps Buy This Theme
+    .blog.container 
+        .cool-title.all-caps From The Blog
+        .glider-contain 
+            .glider
+                -for (var i = 0; i < 5; i++)
+                    +post()
+            +glider_prev()
+            +glider_next()    
+        script new Glider(document.querySelector(".blog .glider-contain .glider"), {slidesToShow: "auto",slidesToScroll: 1, itemWidth: 330, dragVelocity: 1,arrows: {prev: ".glider-prev",next: ".glider-next"},draggable: true,scrollLock: true});
     +our_team()
     +sponsers()
