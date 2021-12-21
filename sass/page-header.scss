@@ -1,46 +1,10 @@
 @import '_vars';
+@import '_mixins';
 
 .page-header {
     position: relative;
     padding: 60px 0;
-    &::before {
-        content: "";
-        position: absolute;
-        background-image: url("../resources/client-overlay-bg.jpg");
-        background-blend-mode: overlay;
-        background-color: rgba(255, 255, 255, 0.90);
-        z-index: -1;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-    }
-    .hierarchy {
-        display: flex;
-        justify-content: center;
-        display: flex;
-        flex-direction: row;
-        gap: 0.5rem;
-        a {
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 400;
-        }
-        a.home-link {
-            color: $gray;
-            transition: color 0.2s ease;
-            &:hover {
-                color: $teal;
-            }
-        }
-        i {
-            color: $gray;
-        }
-        a.page-link {
-            color: $teal;
-        }
-    }
-
+    @include snowy-background();
     .title {
         text-align: center;
         color: #0d1422;

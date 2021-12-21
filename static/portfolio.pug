@@ -1,0 +1,24 @@
+extends layouts/default
+
+block head
+    title Litmus | Portfolio
+    link(rel="stylesheet", href="../css/porfolio.css")
+
+block content 
+    .page-header
+        .container
+            +hierarchy("Portfolio")
+            .title Porfolio Litmus
+            p
+                .
+                    It is a long established fact that a reader
+                    will be distracted by the readable
+                    content of a page when looking at its layout.
+            .section-urls.all-caps
+                .section-url All
+                .section-url Graphic Design
+                .section-url Wordpress
+                .section-url Photography
+    .container.portfolio-projects
+        +portfolio-items()
+        button.load-more.all-caps Load More

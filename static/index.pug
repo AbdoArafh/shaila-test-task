@@ -7,10 +7,6 @@ block head
     script(src="../js/glider.min.js")
     script(src="../js/our-team.js")
 
-mixin project(name, type)
-    .project 
-        .name.all-caps=name 
-        .type= "-" + type + "-"
 
 mixin post()
     .post 
@@ -104,9 +100,7 @@ block content
         script new Glider(document.querySelector(".ratings .glider-contain .glider"), {slidesToShow: 1,slidesToScroll: 1,dragVelocity: 1,arrows: {prev: ".glider-prev",next: ".glider-next"},draggable: true,scrollLock: true});
     .container.projects 
         .cool-title.all-caps Projects
-        .grid
-            -for (var i = 1; i <= 7; i++)
-                +project("Project #"+i, "graphic design")
+        +portfolio-items()
     .call-to-action
         .container
             .title.all-caps <span class="teal">Litmus</span> is a Unique Theme Many Features 

@@ -1,10 +1,14 @@
+mixin hierarchy(page_name)
+    link(rel="stylesheet", href="../../css/hierarchy.css")
+    .hierarchy
+        a.home-link(href="index.html") Home
+        i.fas.fa-angle-right
+        a.page-link(href="#")= page_name
+
 mixin page_header(page_name)
     link(rel="stylesheet", href="../../css/page-header.css")
     .page-header
-        .hierarchy
-            a.home-link(href="index.html") Home
-            i.fas.fa-angle-right
-            a.page-link(href="#")= page_name
+        +hierarchy(page_name)
         h2.title= page_name
 
 mixin progress_bar(percentage)
@@ -44,7 +48,7 @@ mixin glider_next()
     button.glider-next.glider-control(aria-label="Next") ➡
 
 mixin our_team(name, job_title)
-    link(rel="stylesheet", href="../../css/our-team.css")
+    link(rel="stylesheet", href="../../css/our-team-widget.css")
     .container.our-team
         .cool-title Our team of professionals 
         .funny-note 6 people is all we need here apparently.
@@ -67,3 +71,14 @@ mixin sponsers()
     .sponsers.container
         -for (var i = 1; i <= 5; i++)
             +sponser(i)
+
+mixin project(name, type)
+    .project 
+        .name.all-caps=name 
+        .type= "-" + type + "-"
+
+mixin portfolio-items(show_more=true)
+    link(rel="stylesheet", href="../../css/portfolio-items.css")
+    .portfolio-items
+        -for (var i = 1; i <= 7; i++)
+            +project("Project #"+i, "graphic design")

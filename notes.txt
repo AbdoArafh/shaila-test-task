@@ -42,4 +42,8 @@ Steps:
         ✅️ accordions
         ✅️ progress
         ✅️ our team
-    
+✅️ our team page
+[] porfolio page
+[] portfolio details page
+[] 404 page
+[] coming soon page

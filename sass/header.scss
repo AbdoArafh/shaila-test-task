@@ -1,9 +1,7 @@
 @import '_vars';
-$link-padding: 2rem;
+@import '_mixins';
 
-@mixin active-link {
-    background-size: 100% 2px;
-}
+$link-padding: 2rem;
 
 .header {
     display: flex;
@@ -23,9 +21,6 @@ $link-padding: 2rem;
         justify-content: center;
         padding: 0;
         flex: 2 1 auto;
-        a.active-link {
-            @include active-link();
-        }
         a {
             padding: $link-padding 0.5rem;
             color: white;
@@ -39,7 +34,7 @@ $link-padding: 2rem;
             background-position: bottom left;
             transition: background-size 0.5s ease;
             &:hover {
-                @include active-link();
+                @include active-link-style();
             }
         }
     }

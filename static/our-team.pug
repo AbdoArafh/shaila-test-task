@@ -1,0 +1,23 @@
+extends layouts/default
+
+block head
+    title Litmus | Our Team
+    link(rel="stylesheet", href="../css/glider.min.css")
+    link(rel="stylesheet", href="../css/our-team.css")
+    script(src="../js/glider.min.js")
+    script(src="../js/our-team.js")
+
+block content 
+    +page_header("Our Team")
+    .standards 
+        .container 
+            h3.title.all-caps As a Team We Stand for
+            p
+                . 
+                    We are a team of extreme professionals,
+                    working together to provide the best product for you.
+                    No obsticle is too high, nor too low.
+                    We take your concept, work with it and produce 
+                    the best of the best.
+    hr
+    +our_team()

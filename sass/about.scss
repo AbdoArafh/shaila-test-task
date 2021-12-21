@@ -1,5 +1,7 @@
 @import '_vars';
 
+@import '_mixins';
+
 .introduction {
     background-color: white;
     display: grid;
@@ -90,5 +92,11 @@
             font-weight: 600;
             margin: 14px 0;
         }
+    }
+}
+
+.header {
+    .navbar {
+        @include active-link("about");
     }
 }

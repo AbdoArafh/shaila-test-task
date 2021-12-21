@@ -1,0 +1,26 @@
+@import '_vars';
+
+@mixin active-link-style {
+    background-size: 100% 2px;
+    color: $teal;
+}
+
+@mixin active-link($name) {
+    a.#{$name} {
+        @include active-link-style();
+    }
+}
+
+@mixin snowy-background {
+    background-image: url("../resources/client-overlay-bg.jpg");
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.90);
+}
+
+@mixin transition($property-names, $duration:0.35s) {
+    transition: {
+        property: $property-names;
+        duration: $duration;
+        timing-function: ease;
+    };
+}
