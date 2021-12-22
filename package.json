@@ -9,7 +9,7 @@
     "pug": "pug static --out dist -w",
     "sass": "sass sass:css -w --style=compressed --no-source-map",
     "serve": "live-server . --open=dist/index.html",
-    "predeploy": "pug static --out dist ; sass sass:css --style=compressed --no-source-map; cd minifier ; python3 minifier.py ; python3 minifpy.py ; cd ..; rm -rf dist/includes dist/layouts",
+    "predeploy": "rm -rf dist; pug static --out dist ; sass sass:css --style=compressed --no-source-map; cd minifier ; python3 minifier.py ; python3 minifpy.py ; cd ..; rm -rf dist/includes dist/layouts; cp -r js dist; cp dev-css/* dist; cp -r assets dist",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],

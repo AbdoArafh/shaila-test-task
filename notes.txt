@@ -57,4 +57,4 @@ Steps:
 [] portfolio details page
 [] 404 page
 [] coming soon page
-[] minify
+✅️ minify
