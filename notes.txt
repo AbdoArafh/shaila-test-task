@@ -8,6 +8,16 @@ no inline css
 pixel perfect
 responsive
 
+IMPROVMENTS:
+    one css file
+    add comments
+    margin between menu items
+    missed up the spacing
+    learn nextjs or gatsby in 9 days
+    learn GraphQL
+    headless CMS
+    january first
+
 Steps:
 ✅️ the header
     ✅️ layout
@@ -43,7 +53,8 @@ Steps:
         ✅️ progress
         ✅️ our team
 ✅️ our team page
-[] porfolio page
+✅️ porfolio page
 [] portfolio details page
 [] 404 page
 [] coming soon page
+[] minify

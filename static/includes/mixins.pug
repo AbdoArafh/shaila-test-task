@@ -1,12 +1,10 @@
 mixin hierarchy(page_name)
-    link(rel="stylesheet", href="../../css/hierarchy.css")
     .hierarchy
         a.home-link(href="index.html") Home
         i.fas.fa-angle-right
         a.page-link(href="#")= page_name
 
 mixin page_header(page_name)
-    link(rel="stylesheet", href="../../css/page-header.css")
     .page-header
         +hierarchy(page_name)
         h2.title= page_name
@@ -22,7 +20,6 @@ mixin skill(skill, precentage)
         +progress_bar(precentage)
 
 mixin skills()
-    link(rel="stylesheet", href="../../css/progress-bar.css")   
     .skills
         +skill("graphics design", "70%")
         +skill("html/css", "96%")
@@ -67,7 +64,6 @@ mixin sponser(name)
     img.sponser(src="../../resources/sponsers/"+name+".png", alt="sponser")
 
 mixin sponsers()
-    link(rel="stylesheet", href="../../css/sponsers.css")
     .sponsers.container
         -for (var i = 1; i <= 5; i++)
             +sponser(i)
@@ -78,7 +74,6 @@ mixin project(name, type)
         .type= "-" + type + "-"
 
 mixin portfolio-items(show_more=true)
-    link(rel="stylesheet", href="../../css/portfolio-items.css")
     .portfolio-items
         -for (var i = 1; i <= 7; i++)
             +project("Project #"+i, "graphic design")

@@ -1,0 +1,26 @@
+{
+    "css": {
+        "merge_files": [
+            {
+                "from": [
+                    "../css/portfolio-items.css",
+                    "../css/progress-bar.css",
+                    "../css/style.css",
+                    "../css/hierarchy.css",
+                    "../css/page-header.css",
+                    "../css/porfolio.css",
+                    "../css/index.css",
+                    "../css/our-team.css",
+                    "../css/sponsers.css",
+                    "../css/our-team-widget.css",
+                    "../css/header.css",
+                    "../css/about.css",
+                    "../css/footer.css",
+                    "../css/global.css"
+                ],
+                "to": "../css/style.css",
+                "to_min": "../dist/style.css"
+            }
+        ]
+    }
+}
